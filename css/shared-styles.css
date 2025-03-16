@@ -1,0 +1,71 @@
+:root {
+  --primary-color: #1e3c72;
+  --secondary-color: #2a5298;
+  --background-gradient: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%);
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap");
+
+/* Shared Title Styles */
+.page-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 800;
+  font-size: 2.8em;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--background-gradient);
+  border-radius: 2px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Styles */
+/* .footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  background: var(--white);
+  border-top: 1px solid var(--gray);
+  box-shadow: var(--shadow);
+} */
+
+.footer p {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--primary-color);
+  font-size: 0.9em;
+}
+
+.footer span {
+  color: var(--secondary-color);
+  font-weight: 500;
+}

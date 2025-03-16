@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #1e3c72;
+  --secondary-color: #2a5298;
+  --background-gradient: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%);
+  --white: #ffffff;
+  --gray: #f5f5f5;
+  --shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: var(--background-gradient);
+  padding: 40px 20px;
+  color: #333;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+h2 {
+  color: var(--white);
+  margin: 30px 0 20px;
+  font-size: 1.8em;
+}
+
+.conversation-section {
+  margin-bottom: 50px;
+}
+
+.conversation-box {
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  padding: 25px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+.speaker {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #2c3e50;
+}
+
+/* Different colors for different speakers */
+.message.chairman {
+  background-color: #e3f2fd;
+  border-left: 4px solid #1565c0;
+}
+
+.message.participant {
+  background-color: #f5f5f5;
+  border-left: 4px solid #757575;
+}
+
+.message.evan {
+  background-color: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+}
+
+.message.moderator {
+  background-color: #fff3e0;
+  border-left: 4px solid #ef6c00;
+}
+
+.message.davis {
+  background-color: #f3e5f5;
+  border-left: 4px solid #7b1fa2;
+}
+
+.quiz-button {
+  display: block;
+  width: 200px;
+  margin: 40px auto;
+  padding: 15px 25px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.quiz-button:hover {
+  background: #5a4bcf;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .message {
+    padding: 12px;
+  }
+}
